@@ -17,14 +17,14 @@ st.set_page_config(
 alt.themes.enable("dark")
 
 # Loading file and converting the date into the right format  
-data = pd.read_csv(r"C:\Users\Nasrin\OneDrive\Desktop\New folder\Panel format.csv")
+data = pd.read_csv(r"C:\...\Panel format.csv")
 data["Year"] = pd.to_datetime(data["Year"],format="%Y")
 
 with st.sidebar:
     st.title("🌩️Energy Dashboard")
     st.markdown("---")
 
-    sidebar_image = Image.open(r"C:\Users\Nasrin\OneDrive\Desktop\New folder\Energy1.jpeg")
+    sidebar_image = Image.open(r"C:\...\Energy1.jpeg")
     st.sidebar.image(sidebar_image, use_column_width= True)
 
     country = st.sidebar.selectbox("Select a country:", data["Country"].unique())
@@ -41,7 +41,7 @@ st.markdown("""
 This dashboard provides a detailed overview of various energy production trends in the selected country. Navigate using the sidebar to choose a different country.
 """)
 
-main_image = Image.open(r"C:\Users\Nasrin\OneDrive\Desktop\New folder\Energy1.jpeg")
+main_image = Image.open(r"C:\...\Energy1.jpeg")
 st.image(main_image, caption= "Energy Sources" ,use_column_width= True)
 
 def create_chart(data,y,title,yaxis_title):
